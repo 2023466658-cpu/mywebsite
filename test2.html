@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Zamir A. Zenil — Portfolio (Recreation Template)</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071025 0%, #07182a 100%);color:#e6eef8;}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+
+    /* Header */
+    header{backdrop-filter: blur(6px);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);position:sticky;top:0;z-index:40}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#5b21b6);display:flex;align-items:center;justify-content:center;font-weight:800}
+    nav ul{display:flex;gap:18px;align-items:center;margin:0;padding:0;list-style:none}
+    nav a{color:var(--muted);font-weight:600}
+    nav a:hover{color:#fff}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;padding:48px 0}
+    .intro h1{font-size:40px;margin:0 0 8px;line-height:1.02}
+    .intro p{color:var(--muted);margin:0 0 18px}
+    .cta{display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;background:var(--accent);color:white;font-weight:700;border:none;cursor:pointer}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* Card */
+    .profile-card{background:var(--card);border-radius:14px;padding:22px;box-shadow:0 8px 30px rgba(2,6,23,0.6)}
+    .profile-img{width:100%;height:320px;border-radius:10px;background-size:cover;background-position:center}
+    .meta{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+    .meta .name{font-weight:700}
+    .meta .role{color:var(--muted);font-size:13px}
+
+    /* Sections */
+    section{padding:44px 0;border-top:1px dashed rgba(255,255,255,0.02)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--glass);padding:18px;border-radius:12px}
+    .project img{width:100%;border-radius:10px;height:160px;object-fit:cover}
+    h2{margin:0 0 16px}
+
+    /* Contact */
+    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    input, textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    textarea{grid-column:1/-1;min-height:110px}
+
+    footer{padding:28px 0;color:var(--muted);font-size:14px}
+
+    /* Responsive */
+    @media(max-width:920px){.hero{grid-template-columns:1fr} .grid{grid-template-columns:repeat(2,1fr)} .profile-img{height:240px}}
+    @media(max-width:600px){.grid{grid-template-columns:1fr} .nav ul{display:none} .container{padding:20px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">Z</div>
+        <div>
+          <div style="font-weight:800">Zamir A. Zenil</div>
+          <div style="font-size:12px;color:var(--muted)">Web & UI Developer</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="intro">
+        <h1>Hi, I’m <span style="color:var(--accent)">Zamir</span> — crafting clean & useful interfaces.</h1>
+        <p>I build accessible websites, UI designs, and small web apps. This is a single-file recreation template — replace the images and text to match the original site.</p>
+        <div class="cta">
+          <button class="btn">View My Work</button>
+          <button class="btn ghost">Download CV</button>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="profile-img" id="profileImage" style="background-image:url('https://via.placeholder.com/600x400.png?text=Profile+Image')"></div>
+        <div class="meta">
+          <div>
+            <div class="name">Zamir A. Zenil</div>
+            <div class="role">Front-end Developer</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:12px;color:var(--muted)">Based in Malaysia</div>
+            <div style="font-weight:700">Open to work</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <p style="color:var(--muted)">I design and develop responsive websites with a focus on performance and usability. My toolset includes HTML, CSS, JavaScript, and popular frameworks. I enjoy turning complex problems into simple, beautiful interfaces.</p>
+        </div>
+        <div style="width:320px">
+          <div class="card"><strong>Experience</strong><p style="color:var(--muted);margin:6px 0 0">3+ years building web projects for small teams and clients.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <h2>Featured Work</h2>
+      <div class="grid">
+        <div class="card project">
+          <img src="https://via.placeholder.com/800x500.png?text=Project+1" alt="Project 1">
+          <h3>Project Title 1</h3>
+          <p style="color:var(--muted)">Short description of the project, tech used, and outcome.</p>
+        </div>
+        <div class="card project">
+          <img src="https://via.placeholder.com/800x500.png?text=Project+2" alt="Project 2">
+          <h3>Project Title 2</h3>
+          <p style="color:var(--muted)">Short description of the project, tech used, and outcome.</p>
+        </div>
+        <div class="card project">
+          <img src="https://via.placeholder.com/800x500.png?text=Project+3" alt="Project 3">
+          <h3>Project Title 3</h3>
+          <p style="color:var(--muted)">Short description of the project, tech used, and outcome.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Other Projects</h2>
+      <div class="grid">
+        <div class="card"> <strong>Tooling</strong><p style="color:var(--muted)">Design system, UI kit, small JS utilities.</p></div>
+        <div class="card"> <strong>Open Source</strong><p style="color:var(--muted)">Contributions and code samples available on GitHub.</p></div>
+        <div class="card"> <strong>Podcast</strong><p style="color:var(--muted)">Monthly episodes about web development and design.</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:280px">
+          <div class="card">
+            <p style="margin:0 0 12px;color:var(--muted)">Want to work together? Send a message — or replace this with your real contact details.</p>
+            <form class="contact-form" onsubmit="event.preventDefault();alert('Form submitted (demo)');">
+              <input type="text" placeholder="Your name" required>
+              <input type="email" placeholder="Email" required>
+              <textarea placeholder="Message"></textarea>
+              <button class="btn" style="grid-column:1/-1;justify-self:start">Send</button>
+            </form>
+          </div>
+        </div>
+
+        <div style="width:320px">
+          <div class="card">
+            <strong>Social</strong>
+            <ul style="list-style:none;padding:8px 0 0;margin:0;color:var(--muted)">
+              <li>Twitter: @yourhandle</li>
+              <li>GitHub: github.com/yourhandle</li>
+              <li>LinkedIn: /in/yourprofile</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© <span id="year"></span> Zamir A. Zenil — Built with ❤️</div>
+        <div style="color:var(--muted)">Made with HTML, CSS & vanilla JS</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      })
+    })
+  </script>
+</body>
+</html>
