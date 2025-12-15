@@ -1,0 +1,48 @@
+<html>
+<head><title>FORM</title>
+</head>
+<body>
+<H1> CUSTOMER REGISTRATION
+</H1>
+<form>
+<fieldset>
+First Name: <br>
+<input type="text" name="fname" placeholder="Please enter first name" size="50"><br>
+Last Name: <br>
+<input type="text" name="lname" placeholder="Please enter last name" size="50"><br>
+Phone Number: <br>
+<input type="number" name="no" placeholder="+60"><br>
+Gender: <br>
+<input type="radio" name="gender" value="male"> Male
+<input type="radio" name="gender" value="female"> Female <br><br>
+Qualification: <br>
+<input type="checkbox" name="spm" value "yes" >SPM
+<input type="checkbox" name="diploma" value "yes">Diploma
+<input type="checkbox" name="degree" value "yes">Degree
+<input type="checkbox" name="masters" value "yes">Masters
+<input type="checkbox" name="phd" value "yes">PHD <br><br>
+Location: <br>
+<select name="location">
+<option value="australia">Australia</option>
+<option value="uk">United Kingdom</option>
+<option value="Malaysia">Malaysia</option>
+<option value="japan">Japan</option>
+</select>
+<input type="submit" value="Submit">
+
+
+</fieldset><br>
+<fieldset>
+<legend><i>Personal Account:</i></legend>
+Password: <br>
+<input type="password" name="pword"><br>
+
+<label for="userComment">Your Comment:</label><br>
+<textarea id="userComment" name="userComment" placeholder="Please enter your comment" rows="5" cols="40">
+</textarea>
+</fieldset>
+<input type="submit" value="SUBMIT">
+<input type="reset" value="RESET">
+</form>
+</body>
+</html>
